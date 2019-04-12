@@ -11,7 +11,7 @@ typedef void CartChangedCallback(Product product, bool inCart);
 class ShoppingListItem extends StatelessWidget {
   ShoppingListItem({Product product, this.inCart, this.onCartChanged})
       : product = product,
-        super(key: ObjectKey(product));
+        super(key: ObjectKey(product)); // Key is used to identify each unique item. This is very important in a list
 
   final Product product;
   final bool inCart;
