@@ -1,3 +1,4 @@
+import 'package:explore_flutter/counter.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,6 +36,7 @@ class TutorialHome extends StatelessWidget {
         children: <Widget>[
           Text('Hello worlds!'),
           MyButton(),
+          Counter()
         ],
       ),
       floatingActionButton: FloatingActionButton(
