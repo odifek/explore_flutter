@@ -1,10 +1,11 @@
 import 'package:explore_flutter/counter.dart';
 import 'package:flutter/material.dart';
+import 'package:explore_flutter/shopping.dart';
 
 void main() {
   runApp(MaterialApp(
     title: "Flutter Tutorial",
-    home: TutorialHome(),
+    home: ShoppingList(products: _products,),
     theme: ThemeData(
       primaryColor: Colors.indigo[500],
       primaryColorDark: Colors.indigo[700],
@@ -14,6 +15,7 @@ void main() {
 }
 
 class TutorialHome extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +38,8 @@ class TutorialHome extends StatelessWidget {
         children: <Widget>[
           Text('Hello worlds!'),
           MyButton(),
-          Counter()
+          Counter(),
+          //ShoppingList(products: _products,)
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -76,3 +79,12 @@ class MyButton extends StatelessWidget {
     );
   }
 }
+
+const List<Product> _products = <Product>[
+  Product(name: "Shoe"),
+  Product(name: "Sandals"),
+  Product(name: "Laptop"),
+  Product(name: "Television"),
+  Product(name: "Rinser"),
+];
+
